@@ -120,7 +120,8 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
 
 /* commands */
 static const char *termcmd[] = { "foot", NULL };
-static const char *menucmd[] = { "rofi", "-show", "drun", NULL };
+/* static const char *menucmd[] = { "rofi", "-show", "drun", NULL }; */
+static const char *menucmd[] = { "rofi", "-theme", "$XDG_CONFIG_HOME/rofi/type-2-style-7.rasi", "-show", "run", "-run-command", "uwsm", "app", "--", "{cmd}", NULL };
 static const char *browsercmd[] = { "foot", "-T", "lf", "lf", NULL };
 
 static const Key keys[] = {
