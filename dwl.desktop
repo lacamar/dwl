@@ -1,5 +1,5 @@
 [Desktop Entry]
 Name=dwl
 Comment=dwm for Wayland
-Exec=dwl
+Exec=dwl -s "systemctl --user import-environment WAYLAND_DISPLAY DISPLAY"
 Type=Application

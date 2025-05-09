@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=dwl (uwsm-managed)
+Comment=dwm for Wayland, session managed by Universal Wayland Session Manager
+Exec=uwsm start -- dwl.desktop
+DesktopNames=Hyprland
+Type=Application

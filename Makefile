@@ -54,7 +54,7 @@ clean:
 dist: clean
 	mkdir -p dwl-$(VERSION)
 	cp -R LICENSE* Makefile CHANGELOG.md README.md client.h config.def.h \
-		config.mk protocols dwl.1 dwl.c util.c util.h dwl.desktop \
+		config.mk protocols dwl.1 dwl.c util.c util.h dwl.desktop dwl-uwsm.desktop \
 		dwl-$(VERSION)
 	tar -caf dwl-$(VERSION).tar.gz dwl-$(VERSION)
 	rm -rf dwl-$(VERSION)
@@ -69,9 +69,12 @@ install: dwl
 	mkdir -p $(DESTDIR)$(DATADIR)/wayland-sessions
 	cp -f dwl.desktop $(DESTDIR)$(DATADIR)/wayland-sessions/dwl.desktop
 	chmod 644 $(DESTDIR)$(DATADIR)/wayland-sessions/dwl.desktop
+	cp -f dwl-uwsm.desktop $(DESTDIR)$(DATADIR)/wayland-sessions/dwl-uwsm.desktop
+	chmod 644 $(DESTDIR)$(DATADIR)/wayland-sessions/dwl-uwsm.desktop
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/dwl $(DESTDIR)$(MANDIR)/man1/dwl.1 \
 		$(DESTDIR)$(DATADIR)/wayland-sessions/dwl.desktop
+		$(DESTDIR)$(DATADIR)/wayland-sessions/dwl-uwsm.desktop
 
 .SUFFIXES: .c .o
 .c.o:
