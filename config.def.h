@@ -121,13 +121,14 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
 /* commands */
 static const char *termcmd[] = { "foot", NULL };
 /* static const char *menucmd[] = { "rofi", "-show", "drun", NULL }; */
-static const char *menucmd[] = { SHCMD("rofi -theme '$XDG_CONFIG_HOME/rofi/type-2-style-7.rasi' '{cmd}") };
+/* static const char *menucmd[] = { SHCMD("rofi -theme '$XDG_CONFIG_HOME/rofi/type-2-style-7.rasi' '{cmd}") }; */
 static const char *browsercmd[] = { "foot", "-T", "lf", "lf", NULL };
 
 static const Key keys[] = {
 	/* Note that Shift changes certain key codes: c -> C, 2 -> at, etc. */
 	/* modifier                  key                 function        argument */
-	{ MODKEY,                    XKB_KEY_Tab,        spawn,          {.v = menucmd} },
+	{ MODKEY,                    XKB_KEY_Tab,        spawn,          SHCMD("rofi -theme '$XDG_CONFIG_HOME/rofi/type-2-style-7.rasi' '{cmd}") },
+	/* { MODKEY,                 XKB_KEY_Tab,        spawn,          {.v = menucmd} }, */
 	{ MODKEY,		     XKB_KEY_d,		 spawn,          {.v = termcmd} },
 	{ MODKEY,		     XKB_KEY_r,		 spawn,          {.v = browsercmd} },
 	{ MODKEY,                    XKB_KEY_s,          focusstack,     {.i = +1} },
