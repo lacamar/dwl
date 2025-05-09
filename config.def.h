@@ -130,6 +130,7 @@ static const Key keys[] = {
 	{ MODKEY,                    XKB_KEY_x,        spawn,          SHCMD("zen-browser-twilight -profile '/home/snow/.local/share/zen/pwwo5dia.Default (twilight)'") },
 	{ MODKEY,                    XKB_KEY_Tab,        spawn,          SHCMD("rofi -theme $XDF_CONFIG_HOME/rofi/type-2-style-7.rasi '{cmd}'") },
 	{ MODKEY,                    XKB_KEY_Delete,	 spawn,          SHCMD("wlogout -b 6 -m 400 -T 800 -B 800") },
+	{ MODKEY,                    XKB_KEY_p,		 spawn,          SHCMD("playerctl --player playerctld play-pause") },
 	/* { MODKEY,                 XKB_KEY_Tab,        spawn,          {.v = menucmd} }, */
 	{ MODKEY,		     XKB_KEY_d,		 spawn,          {.v = termcmd} },
 	{ MODKEY,		     XKB_KEY_r,		 spawn,          {.v = browsercmd} },
