@@ -128,7 +128,7 @@ static const Key keys[] = {
 	/* Note that Shift changes certain key codes: c -> C, 2 -> at, etc. */
 	/* modifier                  key                 function        argument */
 	{ MODKEY,                    XKB_KEY_x,        spawn,          SHCMD("zen-browser-twilight -profile '/home/snow/.local/share/zen/pwwo5dia.Default (twilight)'") },
-	{ MODKEY,                    XKB_KEY_Tab,        spawn,          SHCMD("rofi -theme /home/snow/.local/rofi/type-2-style-7.rasi '{cmd}'") },
+	{ MODKEY,                    XKB_KEY_Tab,        spawn,          SHCMD("rofi -theme $XDF_CONFIG_HOME/rofi/type-2-style-7.rasi '{cmd}'") },
 	{ MODKEY,                    XKB_KEY_Delete,	 spawn,          SHCMD("wlogout -b 6 -m 400 -T 800 -B 800") },
 	/* { MODKEY,                 XKB_KEY_Tab,        spawn,          {.v = menucmd} }, */
 	{ MODKEY,		     XKB_KEY_d,		 spawn,          {.v = termcmd} },
