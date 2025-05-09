@@ -131,7 +131,7 @@ static const Key keys[] = {
 	{ MODKEY,                    XKB_KEY_Tab,        spawn,          SHCMD("rofi -theme /home/snow/.config/rofi/type-2-style-7.rasi '{cmd}'") },
 	{ MODKEY,                    XKB_KEY_Delete,	 spawn,          SHCMD("wlogout -b 6 -m 400 -T 800 -B 800") },
 	{ MODKEY,                    XKB_KEY_p,		 spawn,          SHCMD("playerctl --player playerctld play-pause") },
-	{ MODKEY|WLR_MODIFIER_CTRL,  XKB_KEY_p,		 spawn,          SHCMD("foot nvim /home/snow/.config/hypr/hyprland.conf") },
+	{ MODKEY|WLR_MODIFIER_CTRL,  XKB_KEY_p,		 spawn,          SHCMD("foot 'nvim /home/snow/software/builds/dwl-v0.7/config.def.h; make clean; git add .;git commit; sudo make install'") },
 	/* { MODKEY,                 XKB_KEY_Tab,        spawn,          {.v = menucmd} }, */
 	{ MODKEY,		     XKB_KEY_d,		 spawn,          {.v = termcmd} },
 	{ MODKEY,		     XKB_KEY_r,		 spawn,          {.v = browsercmd} },
