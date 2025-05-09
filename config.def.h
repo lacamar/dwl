@@ -128,6 +128,7 @@ static const Key keys[] = {
 	/* Note that Shift changes certain key codes: c -> C, 2 -> at, etc. */
 	/* modifier                  key                 function        argument */
 	{ MODKEY,                    XKB_KEY_Tab,        spawn,          SHCMD("rofi -theme '$XDG_CONFIG_HOME/rofi/type-2-style-7.rasi' '{cmd}") },
+	{ MODKEY,                    XKB_KEY_Delete,	 spawn,          SHCMD("wlogout -b 6 -m 400 -T 800 -B 800") },
 	/* { MODKEY,                 XKB_KEY_Tab,        spawn,          {.v = menucmd} }, */
 	{ MODKEY,		     XKB_KEY_d,		 spawn,          {.v = termcmd} },
 	{ MODKEY,		     XKB_KEY_r,		 spawn,          {.v = browsercmd} },
@@ -166,6 +167,7 @@ static const Key keys[] = {
 	TAGKEYS(          XKB_KEY_8, XKB_KEY_asterisk,                   7),
 	TAGKEYS(          XKB_KEY_9, XKB_KEY_parenleft,                  8),
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_Q,          quit,           {0} },
+	{ MODKEY|WLR_MODIFIER_SHIFT|WLR_MODIFIER_CTRL,XKB_KEY_B,  spawn, SHCMD("wallpaper-hyprpaper") },
 
 	/* Ctrl-Alt-Backspace and Ctrl-Alt-Fx used to be handled by X server */
 	{ WLR_MODIFIER_CTRL|WLR_MODIFIER_ALT,XKB_KEY_Terminate_Server, quit, {0} },
