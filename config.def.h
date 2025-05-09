@@ -128,13 +128,15 @@ static const Key keys[] = {
 	/* Note that Shift changes certain key codes: c -> C, 2 -> at, etc. */
 	/* modifier                  key                 function        argument */
 	{ MODKEY,                    XKB_KEY_x,        spawn,          SHCMD("zen-browser-twilight -profile '/home/snow/.local/share/zen/pwwo5dia.Default (twilight)'") },
-	{ MODKEY,                    XKB_KEY_Tab,        spawn,          SHCMD("rofi -theme /home/snow/.config/rofi/type-2-style-7.rasi '{cmd}'") },
+	{ MODKEY,                    XKB_KEY_Tab,        spawn,          SHCMD("rofi -theme /home/snow/.config/rofi/type-2-style-7.rasi -show drun -run-command 'uwsm app -- {cmd}'") },
 	{ MODKEY,                    XKB_KEY_Delete,	 spawn,          SHCMD("wlogout -b 6 -m 400 -T 800 -B 800") },
 	{ MODKEY,                    XKB_KEY_p,		 spawn,          SHCMD("playerctl --player playerctld play-pause") },
-	{ MODKEY|WLR_MODIFIER_CTRL,  XKB_KEY_p,		 spawn,          SHCMD("foot 'nvim /home/snow/software/builds/dwl-v0.7/config.def.h; make clean; git add .;git commit; sudo make install'") },
+	{ MODKEY|WLR_MODIFIER_CTRL,  XKB_KEY_c,		 spawn,          SHCMD("foot 'nvim /home/snow/software/builds/dwl-v0.7/config.def.h; make clean; git add .;git commit; sudo make install'") },
 	/* { MODKEY,                 XKB_KEY_Tab,        spawn,          {.v = menucmd} }, */
 	{ MODKEY,		     XKB_KEY_d,		 spawn,          {.v = termcmd} },
 	{ MODKEY,		     XKB_KEY_r,		 spawn,          {.v = browsercmd} },
+	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_W,          shifttag,       {.i = -1} },
+	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_E,          shifttag,       {.i = +1} },
 	{ MODKEY,                    XKB_KEY_s,          focusstack,     {.i = +1} },
 	{ MODKEY,                    XKB_KEY_j,          focusstack,     {.i = +1} },
 	{ MODKEY,                    XKB_KEY_Down,       focusstack,     {.i = +1} },
